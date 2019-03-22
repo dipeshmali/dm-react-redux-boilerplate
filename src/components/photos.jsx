@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
+import { NavLink } from 'react-router-dom';
 
 import { get_photos } from '../store/actions';
 
@@ -29,6 +30,7 @@ class photos extends Component {
         return (
             <div>
                 <h1>Photo List</h1>
+                <NavLink to="/dashboard">Back To Dashboard</NavLink>
                     {
                         (isloading ? <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i> :
                             (photoList && photoList.length > 0 ?
